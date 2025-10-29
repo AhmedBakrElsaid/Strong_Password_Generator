@@ -27,3 +27,23 @@ random.shuffle(s2)
 random.shuffle(s3)
 random.shuffle(s4)
 
+
+part1 = round(characters_numbers * (30/100))
+part2 = round(characters_numbers * (20/100))
+
+password = []
+
+for i in range(part1):
+    password.append(s1[i])
+    password.append(s2[i])
+
+
+for i in range(part2):
+    password.append(s3[i])
+    password.append(s4[i])
+
+random.shuffle(password)
+
+password = ''.join(password[0:])
+
+print(password)
